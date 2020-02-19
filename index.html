@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./rectangle.css">
+    <title>矩形计算器</title>
+</head>
+<body>
+    <div id="box">
+        <label>宽度：</label>
+        <input id="width" type="text" data-label="宽度" autofocus>
+        <span>*</span>
+        <br>
+        <label>高度：</label>
+        <input id="height" type="text" data-label="高度">
+        <span>*</span>
+        <br>
+        <input id="calc" type="button" value="计算">
+        <br>
+        <label>周长：</label>
+        <input id="perimeter" type="text" disabled>
+        <br>
+        <label>面积：</label>
+        <input id="area" type="text" disabled>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>    
+    <script src="./rectangle.js"></script>
+</body>
+</html>
