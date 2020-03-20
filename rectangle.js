@@ -19,7 +19,11 @@ $(function() {
         $widthValidate.html('');
       }
     });
-  
+    $width.keypress(function(e) {
+        if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {
+          e.preventDefault();
+        }
+      });
     $height.focusout(function() {
       var result = validate($height.val());
       isPassValidate = result.isOK;
@@ -30,7 +34,11 @@ $(function() {
         $heightValidate.html('');
       }
     });
-  
+    $height.keypress(function(e) {
+        if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {
+          e.preventDefault();
+        }
+      });
     $btnCal.click(function(){
       if(!isPassValidate) return;
   
