@@ -7,16 +7,20 @@ $(function() {
     var $area    =$('#area');
     /*calc button click event*/
     $calc.click(function() {
-        //get value
-        var width  = Number($width.val());
-        var height = Number($height.val());
-        //calculate
-        var p      = roundFractional(width * 2 + height * 2, 10);
-        var a      = roundFractional(width * height, 10);
+        // //get value
+        // var width  = Number($width.val());
+        // var height = Number($height.val());
+        // //calculate
+        // var p      = roundFractional(width * 2 + height * 2, 10);
+        // var a      = roundFractional(width * height, 10);
+        // $perimeter.val(p);
+        // $area.val(a);
         //output
-        $perimeter.val(p);
-        $area .val(a);
+        var rect = rectangle();
+        $perimeter.val(rect.perimeter($width.val(), $height.val()));
+        $area.val(rect.area($width.val(), $height.val()));
     });
+    
     /**
      * 小数点后面保留第 n 位
      * 
