@@ -46,7 +46,7 @@ module.exports = function (grunt) {
             'dist/bundle.min.js': 'dist/bundle.js',
           }
         }},
-      },
+      
       useminPrepare: {
         html: 'index.html',
         options: {
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
         html: {
           src: './index.html',
           dest: './dist/index.html'
-        }
+        }}
     });
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-htmlhint');
