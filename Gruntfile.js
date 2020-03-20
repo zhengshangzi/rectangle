@@ -33,7 +33,7 @@ module.exports = function (grunt) {
           preserveLineBreaks: false
         },
         files: {
-          src: './index.html',
+          src: 'dist/index.html',
           dest: 'dist/index.html'
         }
       },
@@ -44,11 +44,26 @@ module.exports = function (grunt) {
         release:{
           files: {
             'dist/rectangle.js': 'rectangle.js',
-            'dist/calc.js': 'calc.js'
+            'dist/util.js': 'util.js'
           }
-        }},     
+        }},   
+        copy: {
+          html: {
+              src: "./index.html", 
+              dest: "./dist/index.html"
+          },
+          css: {
+              src: "./rectangle.css",
+              dest: "./dist/rectangle.css"
+          },
+          js:{
+              src: ['rectangle.js', 'util.js'],
+              dest: ['dist/rectangle.js', 'dist/util.js']
+          }
+      }  
    
     });
+
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-eslint');
@@ -60,4 +75,4 @@ module.exports = function (grunt) {
 
     grunt.registerTask('lint', ['htmlhint', 'csslint', 'eslint']);
     grunt.registerTask('default', ['mocha']);
-    grunt.registerTask('minify', ['htmlmin', 'cssmin', 'uglify']);  };
+    grunt.registerTask("release", ['copy', 'htmlmin','cssmin', 'uglify']);
