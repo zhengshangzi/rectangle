@@ -1,4 +1,4 @@
-/* global Rectangle, validate: true */
+/* global Rectangle, validate, isLegalKey, $forkMeGH, $bszPageFooter: true */
 $(function() {
     var $width = $('#width'),
         $height = $('#height'),
@@ -8,8 +8,10 @@ $(function() {
         $widthValidate = $('#width-validate'),
         $heightValidate = $('#height-validate'),
         isPassValidate = false;
-        $forkMeGH.show("https://github.com/wujinya2017/w-zuoye-baidu");
-        $bszPageFooter.show("body");
+  
+    $forkMeGH.show('https://github.com/wangding/rectangle');
+    $bszPageFooter.show('body');
+  
     $width.focusout(function() {
       var result = validate($width.val());
       isPassValidate = result.isOK;
@@ -20,11 +22,13 @@ $(function() {
         $widthValidate.html('');
       }
     });
+  
     $width.keypress(function(e) {
-        if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {
-          e.preventDefault();
-        }
-      });
+      if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {
+        e.preventDefault();
+      }
+    });
+  
     $height.focusout(function() {
       var result = validate($height.val());
       isPassValidate = result.isOK;
@@ -35,11 +39,13 @@ $(function() {
         $heightValidate.html('');
       }
     });
+  
     $height.keypress(function(e) {
-        if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {
-          e.preventDefault();
-        }
-      });
+      if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {
+        e.preventDefault();
+      }
+    });
+  
     $btnCal.click(function(){
       if(!isPassValidate) return;
   

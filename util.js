@@ -1,4 +1,4 @@
-/* exported Rectangle, validate, roundFractional */
+/* exported Rectangle, validate, roundFractional, isLegalKey */
 function Rectangle(width, height) {
   var w = Number(width),
       h = Number(height);
@@ -55,6 +55,7 @@ function validate(data) {
   result.isOK = true;
   return result;
 }
+
 /**
  * 检查按键是否合法
  *
