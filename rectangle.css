@@ -18,5 +18,11 @@ input,label,span{
 span {
     color: red;
 }
+#rectangle-width-validate,
+#rectangle-height-validate {
+  color: red;
+  margin-left: 63px;
+  font-size: 0.8em;
+}
 
   
