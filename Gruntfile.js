@@ -45,8 +45,7 @@ module.exports = function (grunt) {
           files: {
             'dist/bundle.min.js': 'dist/bundle.js',
           }
-        }},
-      
+        }},     
       useminPrepare: {
         html: 'index.html',
         options: {
@@ -61,7 +60,7 @@ module.exports = function (grunt) {
           separator: ';'
         },
         js: {
-          src: ['rectangle.js', 'calc.js'],
+          src: ['rectangle.js', 'util.js'],
           dest: 'dist/bundle.js'
         }
       },
@@ -85,4 +84,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.registerTask('lint', ['htmlhint', 'csslint', 'eslint']);
     grunt.registerTask('default', ['mocha']);
-    grunt.registerTask('release', ['copy', 'useminPrepare', 'concat', 'uglify', 'usemin', 'cssmin', 'htmlmin', 'clean']);  };
+    grunt.registerTask('release', ['copy', 'useminPrepare', 'concat', 'uglify', 'usemin', 'cssmin', 'htmlmin', 'clean']);  
+  };
