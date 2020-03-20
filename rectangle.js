@@ -1,5 +1,7 @@
 /* global Rectangle, validate: true */
 $(function() {
+    $forkMeGH.show("https://github.com/wujinya2017/w-zuoye-baidu");
+    $bszPageFooter.show("body");
     var $width = $('#width'),
         $height = $('#height'),
         $btnCal = $('#calculate'),
