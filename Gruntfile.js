@@ -1,4 +1,3 @@
-/* global module: true */
 module.exports = function (grunt) {
     grunt.initConfig({
       eslint: {
@@ -25,15 +24,14 @@ module.exports = function (grunt) {
         },
         options: {
           run: true,
-          reporter: 'Spec'
+          reporter: 'Dot'
         }
-          }
+      }
     });
-  
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-mocha');
     grunt.registerTask('lint', ['htmlhint', 'csslint', 'eslint']);
-    grunt.registerTask('unitTest', ['mocha']);
+    grunt.registerTask('default', ['mocha']);
   };

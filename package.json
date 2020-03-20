@@ -1,30 +1,22 @@
 {
-  "name": "rectangle",
+  "name": "mocha-fe",
   "version": "1.0.0",
   "description": "",
-  "main": "rectangle.js",
-  "dependencies": {
-    "grunt": "^1.0.4"
-  },
-  "devDependencies": {
-    "grunt": ">=0.4.5",
-    "grunt-contrib-csslint": "^2.0.0",
-    "grunt-mocha": "^0.4.12",
-    "grunt-eslint": "^21.0.0",
-    "grunt-htmlhint": "^0.9.13"
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhengshangzi/rectangle.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zhengshangzi/rectangle/issues"
-  },
-  "homepage": "https://github.com/zhengshangzi/rectangle#readme"
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-eslint": "^22.0.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-mocha": "^1.2.0"
+  }
 }
