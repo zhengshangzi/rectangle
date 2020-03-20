@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         release:{
           files: {
             'dist/rectangle.js': 'rectangle.js',
-            'dist/calc.js': 'calc.js'
+            'dist/util.js': 'util.js'
           }
         }}
     });
