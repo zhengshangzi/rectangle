@@ -1,7 +1,5 @@
 /* global Rectangle, validate: true */
 $(function() {
-    $forkMeGH.show("https://github.com/wujinya2017/w-zuoye-baidu");
-    $bszPageFooter.show("body");
     var $width = $('#width'),
         $height = $('#height'),
         $btnCal = $('#calculate'),
@@ -10,7 +8,8 @@ $(function() {
         $widthValidate = $('#width-validate'),
         $heightValidate = $('#height-validate'),
         isPassValidate = false;
-  
+        $forkMeGH.show("https://github.com/wujinya2017/w-zuoye-baidu");
+        $bszPageFooter.show("body");
     $width.focusout(function() {
       var result = validate($width.val());
       isPassValidate = result.isOK;
