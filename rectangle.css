@@ -4,7 +4,7 @@ input, label {
     padding-left: 5px;
   }
   
-  span {
+  .star {
     color: red;
   }
   
